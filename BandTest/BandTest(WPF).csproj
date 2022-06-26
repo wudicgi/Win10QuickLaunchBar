@@ -68,6 +68,62 @@
       <DependentUpon>BandControlT.xaml</DependentUpon>
     </Compile>
     <Compile Include="Setting.cs" />
+    <Compile Include="WindowsDeskBand\Annotations\Annotations.cs" />
+    <Compile Include="WindowsDeskBand\BandOperate.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandAttributes.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandCore.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandEvents.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandOptions.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandSize.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\Menu\DeskBandMenu.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\Menu\DeskBandMenuAction.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\Menu\DeskBandMenuItem.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\Menu\DeskBandMenuSeparator.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\BandParts\TaskBarInfo.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\IDeskBandCore.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IBandSite.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\ICatRegister.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IContextMenu.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IContextMenu2.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IContextMenu3.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IDeskBand.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IDeskBand2.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IDockingWindow.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IInputObject.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IInputObjectSite.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IObjectWithSite.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IOleCommandTarget.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IOleWindow.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IPersist.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\IPersistStream.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\COM\ITrayDeskband.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\APPBARDATA.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\APPBARMESSAGE.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\BANDSITEINFO.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\CATEGORYINFO.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\CMINVOKECOMMANDINFO.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\CMINVOKECOMMANDINFOEX.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\COLORREF.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\DESKBANDINFO.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\HRESULT.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\MENUITEMINFO.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\MSG.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\OLECMD.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\OLECMDTEXT.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\POINT.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\QueryContextMenuFlags.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\RECT.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\Shell32.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\tagDeskBandCID.cs" />
+    <Compile Include="WindowsDeskBand\DeskBand\Introp\Struct\User32.cs" />
+    <Compile Include="WPFBand\BandHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPFBand\BandHost.Designer.cs">
+      <DependentUpon>BandHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPFBand\ColorExtension.cs" />
+    <Compile Include="WPFBand\WPFBandControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -79,16 +135,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WindowsDeskBand\WindowsDeskBand.csproj">
-      <Project>{bba19f80-546f-415c-be96-f98310a56efa}</Project>
-      <Name>WindowsDeskBand</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WPFBand\WPFBand.csproj">
-      <Project>{0b6381b3-f06a-4089-805c-2f9edec21acb}</Project>
-      <Name>WPFBand</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="setting.ini">
