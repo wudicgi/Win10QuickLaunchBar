@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace BandTest {
+namespace QuickLaunchBar {
     public class AssemblyResolve {
         #region Properties
         #endregion

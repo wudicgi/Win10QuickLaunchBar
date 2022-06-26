@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace BandTest {
+namespace QuickLaunchBar {
     internal class Setting {
         #region Properties
         #endregion

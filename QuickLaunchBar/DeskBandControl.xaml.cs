@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using WindowsDeskBand.DeskBand.BandParts;
 using WPFBand;
 
-namespace BandTest
+namespace QuickLaunchBar
 {
     /// <summary>
     /// DeskBandControl.xaml 的交互逻辑

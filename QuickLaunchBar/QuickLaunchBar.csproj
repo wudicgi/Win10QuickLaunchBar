@@ -162,7 +162,6 @@
     <None Include="test.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="TextFile1.txt" />
     <Content Include="tools\gacutil.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
