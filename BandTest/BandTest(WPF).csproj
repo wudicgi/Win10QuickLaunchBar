@@ -67,6 +67,9 @@
     <Compile Include="BandControlT.xaml.cs">
       <DependentUpon>BandControlT.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeskBandControl.xaml.cs">
+      <DependentUpon>DeskBandControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Setting.cs" />
     <Compile Include="WindowsDeskBand\Annotations\Annotations.cs" />
     <Compile Include="WindowsDeskBand\BandOperate.cs" />
@@ -132,6 +135,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="BandControlT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeskBandControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

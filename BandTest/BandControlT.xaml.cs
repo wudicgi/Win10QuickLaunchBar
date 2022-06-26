@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
 using WindowsDeskBand.DeskBand.BandParts;
@@ -20,10 +21,7 @@ namespace BandTest {
     /// <summary>
     /// BandControlT.xaml 的交互逻辑
     /// </summary>
-    [ComVisible(true)]
-    [Guid("eabd5a5b-4273-4fb8-a851-aa0d4b803534")]
-    [BandRegistration(Name = "CloseMonitor", ShowDeskBand = true)]
-    public partial class BandControlT : WPFBandControl {
+    public partial class BandControlT : UserControl {
 
         #region interop
         private const int SC_MONITORPOWER = 0xF170;
@@ -57,6 +55,8 @@ namespace BandTest {
                 typeof(BandControlT), new PropertyMetadata(true));
 
 
+
+        public List<DeskBandMenuItem> DeskBandContextMenu => _menu;
 
         private List<DeskBandMenuItem> _menu {
             get {
@@ -138,8 +138,6 @@ namespace BandTest {
         }
 
         public BandControlT() {
-            Options.MinHorizontalSize.Width = 24;
-            Options.ContextMenuItems = _menu;
             InitializeComponent();
             InitAsync();
             Init();

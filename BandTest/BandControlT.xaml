@@ -1,8 +1,8 @@
-﻿<db:WPFBandControl x:Class="BandTest.BandControlT"
+﻿<UserControl x:Class="BandTest.BandControlT"
                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                    xmlns:db="clr-namespace:WPFBand"
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <db:WPFBandControl.Resources>
+    <UserControl.Resources>
         <SolidColorBrush x:Key="BtnFgN"
                          Color="#CCCCCC" />
         <SolidColorBrush x:Key="BtnFgO"
@@ -11,7 +11,7 @@
                          Color="#C0C0C0" />
         <SolidColorBrush x:Key="BtnBg"
                          Color="#A0C0C0C0" />
-    </db:WPFBandControl.Resources>
+    </UserControl.Resources>
 
     <Grid MinWidth="32"
           Width="32"
@@ -81,4 +81,4 @@
             </Button.Style>
         </Button>
     </Grid>
-</db:WPFBandControl>
+</UserControl>
