@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:dbt="clr-namespace:BandTest;assembly=BandTest"
+        xmlns:dbt="clr-namespace:BandTest;assembly=QuickLaunchBar"
         xmlns:local="clr-namespace:PreviewApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="800">
+        Title="Quick Launch Bar Preview" Height="200" Width="800">
     <Grid Margin="50">
         <dbt:BandControlT />
     </Grid>

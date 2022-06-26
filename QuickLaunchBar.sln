@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandTest(WPF)", "BandTest\BandTest(WPF).csproj", "{5E7378AB-582C-4B4B-88B2-4CAD96839B39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLaunchBar", "QuickLaunchBar\QuickLaunchBar.csproj", "{5E7378AB-582C-4B4B-88B2-4CAD96839B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewApplication", "PreviewApplication\PreviewApplication.csproj", "{DBE06AC6-85DF-4050-B038-05CCC762997D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLaunchBarPreview", "QuickLaunchBarPreview\QuickLaunchBarPreview.csproj", "{DBE06AC6-85DF-4050-B038-05CCC762997D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
