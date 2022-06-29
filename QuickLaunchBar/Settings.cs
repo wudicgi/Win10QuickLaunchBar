@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 
 namespace QuickLaunchBar {
-    internal class Setting {
+    internal class Settings {
         #region Properties
         #endregion
 

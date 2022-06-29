@@ -37,7 +37,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>test.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>QuickLaunchBar.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -64,13 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyResolve.cs" />
-    <Compile Include="BandControlT.xaml.cs">
-      <DependentUpon>BandControlT.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DeskBandControl.xaml.cs">
       <DependentUpon>DeskBandControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Setting.cs" />
+    <Compile Include="QuickLaunchPanel.xaml.cs">
+      <DependentUpon>QuickLaunchPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ShortcutInfo.cs" />
     <Compile Include="WindowsDeskBand\Annotations\Annotations.cs" />
     <Compile Include="WindowsDeskBand\BandOperate.cs" />
     <Compile Include="WindowsDeskBand\DeskBand\BandParts\BandAttributes.cs" />
@@ -134,17 +135,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="BandControlT.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="DeskBandControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="QuickLaunchPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="setting.ini">
+    <None Include="QuickLaunchBar.snk" />
+    <None Include="settings.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Install.bat">
@@ -159,7 +161,6 @@
     <None Include="Uninstall.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="test.snk" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="tools\gacutil.exe">
@@ -168,6 +169,17 @@
     <Content Include="tools\RegAsm.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

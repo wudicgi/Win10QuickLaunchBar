@@ -1,13 +1,13 @@
-﻿<Window x:Class="PreviewApplication.MainWindow"
+﻿<Window x:Class="QuickLaunchBarPreview.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:dbt="clr-namespace:QuickLaunchBar;assembly=QuickLaunchBar"
-        xmlns:local="clr-namespace:PreviewApplication"
+        xmlns:qlb="clr-namespace:QuickLaunchBar;assembly=QuickLaunchBar"
+        xmlns:local="clr-namespace:QuickLaunchBarPreview"
         mc:Ignorable="d"
-        Title="Quick Launch Bar Preview" Height="200" Width="800">
+        Title="Quick Launch Bar Preview" Height="165" Width="800">
     <Grid Margin="50">
-        <dbt:BandControlT />
+        <qlb:QuickLaunchPanel Background="#004275" />
     </Grid>
 </Window>

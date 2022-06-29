@@ -1,7 +1,7 @@
-﻿<Application x:Class="PreviewApplication.App"
+﻿<Application x:Class="QuickLaunchBarPreview.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PreviewApplication"
+             xmlns:local="clr-namespace:QuickLaunchBarPreview"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
