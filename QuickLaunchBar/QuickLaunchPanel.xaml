@@ -46,6 +46,7 @@
                 x:Name="stackPanelMain">
         <StackPanel.ContextMenu>
             <ContextMenu>
+                <MenuItem Header="打开快捷方式文件夹" Click="MenuItemOpenShortcutFolder_Click" />
                 <MenuItem Header="打开 INI 配置文件" Click="MenuItemOpenIniFile_Click" />
                 <MenuItem Header="重新加载配置" Click="MenuItemReloadAll_Click" />
             </ContextMenu>

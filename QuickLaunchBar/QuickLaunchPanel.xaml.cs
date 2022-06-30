@@ -261,6 +261,14 @@ namespace QuickLaunchBar
             process.Start();
         }
 
+        private void MenuItemOpenShortcutFolder_Click(object sender, RoutedEventArgs e)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "explorer.exe";
+            process.StartInfo.Arguments = _shortcutFolderFullPath;
+            process.Start();
+        }
+
         private void MenuItemOpenIniFile_Click(object sender, RoutedEventArgs e)
         {
             Process process = new Process();
