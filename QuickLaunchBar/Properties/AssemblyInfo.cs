@@ -7,12 +7,12 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("QuickLaunchBar")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Win10QuickLaunchBar")]
+[assembly: AssemblyDescription("Quick Launch Bar for Windows 10")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("@ Y_Theta")]
-[assembly: AssemblyProduct("QuickLaunchBar")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("wudicgi")]
+[assembly: AssemblyProduct("Win10QuickLaunchBar")]
+[assembly: AssemblyCopyright("Copyright (C) 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
