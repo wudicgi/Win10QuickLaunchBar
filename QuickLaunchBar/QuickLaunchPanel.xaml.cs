@@ -22,9 +22,11 @@ namespace QuickLaunchBar
         private string _shortcutFolderFullPath = @"%APPDATA%\Microsoft\Internet Explorer\Quick Launch";
 
         private Color _backgroundColor = Colors.Red;
-        private Color _buttonMouseOverColor = Colors.Green;
-        private Color _buttonMouseDownColor = Colors.Blue;
+        private Color _buttonMouseOverColor = Colors.Transparent;
+        private Color _buttonMouseDownColor = Colors.Transparent;
 
+        private double _buttonMouseOverBrightnessChange = 0.1;
+        private double _buttonMouseDownBrightnessChange = 0.15;
         private double _buttonPadding = 3;
 
         public QuickLaunchPanel()
@@ -72,10 +74,26 @@ namespace QuickLaunchBar
             _shortcutFolderFullPath = Path.GetFullPath(Environment.ExpandEnvironmentVariables(_shortcutFolderFullPath));
 
             ReadIniColorValue("appearance", "backgroundColor", ref _backgroundColor);
+
+            ReadIniDoubleValue("appearance", "buttonMouseOverBrightnessChange", ref _buttonMouseOverBrightnessChange);
+            ReadIniDoubleValue("appearance", "buttonMouseDownBrightnessChange", ref _buttonMouseDownBrightnessChange);
+
             ReadIniColorValue("appearance", "buttonMouseOverColor", ref _buttonMouseOverColor);
             ReadIniColorValue("appearance", "buttonMouseDownColor", ref _buttonMouseDownColor);
 
             ReadIniDoubleValue("appearance", "buttonPadding", ref _buttonPadding);
+
+            // Compute colors
+
+            if (_buttonMouseOverColor == Colors.Transparent)
+            {
+                _buttonMouseOverColor = ChangeColorBrightness(_backgroundColor, (float)_buttonMouseOverBrightnessChange);
+            }
+
+            if (_buttonMouseDownColor == Colors.Transparent)
+            {
+                _buttonMouseDownColor = ChangeColorBrightness(_backgroundColor, (float)_buttonMouseDownBrightnessChange);
+            }
 
             // Apply values
 
@@ -84,6 +102,39 @@ namespace QuickLaunchBar
             thisUserControl.Resources["ButtonMouseDownColorBrush"] = new SolidColorBrush(_buttonMouseDownColor);
 
             thisUserControl.Resources["ButtonPadding"] = new Thickness(_buttonPadding);
+        }
+
+        // from https://stackoverflow.com/questions/801406/c-create-a-lighter-darker-color-based-on-a-system-color/12598573#12598573
+        /// <summary>
+        /// Creates color with corrected brightness.
+        /// </summary>
+        /// <param name="color">Color to correct.</param>
+        /// <param name="correctionFactor">The brightness correction factor. Must be between -1 and 1. 
+        /// Negative values produce darker colors.</param>
+        /// <returns>
+        /// Corrected <see cref="Color"/> structure.
+        /// </returns>
+        private static Color ChangeColorBrightness(Color color, float correctionFactor)
+        {
+            float red = (float)color.R;
+            float green = (float)color.G;
+            float blue = (float)color.B;
+
+            if (correctionFactor < 0)
+            {
+                correctionFactor = 1 + correctionFactor;
+                red *= correctionFactor;
+                green *= correctionFactor;
+                blue *= correctionFactor;
+            }
+            else
+            {
+                red = (255 - red) * correctionFactor + red;
+                green = (255 - green) * correctionFactor + green;
+                blue = (255 - blue) * correctionFactor + blue;
+            }
+
+            return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
         }
 
         private void ReadIniStringValue(string iniSection, string iniKey, ref string destValue)
